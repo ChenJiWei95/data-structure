@@ -1,0 +1,13 @@
+本包为数据结构栈实现
+Stack.java 为接口
+
+EX结尾的类即为扩展
+ArrayStackEX	以数组实现的栈
+NodeStackEX		以内部类节点实现的栈
+LinkedStackEX	以LinkedList实现的栈
+
+抽象方法：
+	public abstract boolean isEmpty() ;
+	public abstract boolean push(E e) ;
+	public abstract E peek() ;
+	public abstract E pop() ;
