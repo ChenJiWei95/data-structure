@@ -1,4 +1,4 @@
-package com.chen.test;
+package com.chen.genlist.test;
 
 import com.chen.genlist.GenList;
 import com.chen.genlist.ext.GenListExt;
