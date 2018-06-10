@@ -6,7 +6,7 @@ README
 
 |Author|威|
 |---|---
-|E-mail|Jelly.K.Wang@qq.com
+|E-mail|chenJiWey@163.com
 |引用|[引用自][cnsd1]
 
 ****
