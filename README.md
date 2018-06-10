@@ -18,7 +18,6 @@
 >> 归并排序 <br>
 >> 基数排序 <br>
 >> 堆排序 <br>
-<<<<<<< HEAD
 
 > tree(树)
 >> com.chen.tree.BinaryTree（二叉树）<br>
