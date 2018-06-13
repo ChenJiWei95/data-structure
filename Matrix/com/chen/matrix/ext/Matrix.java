@@ -15,15 +15,29 @@ public class Matrix {
 	private int rows, columns;
 	private int[][] elements;
 	
+	/**
+	 * Matrix 构造空矩阵
+	 * @param m	  行数
+	 * @param n  列数
+	 */
 	public Matrix (int m, int n) {
 		this.elements = new int[m][n];
 		this.rows = m;
 		this.columns = n;
 	}
+	/**
+	 * Matrix 构造空矩阵
+	 * @param n 行数列数均为n
+	 */
 	public Matrix (int n) {
 		this(n, n);
 	}
-
+	/**
+	 * Matrix 构造以参数value为数据的矩阵
+	 * @param m  行数
+	 * @param n  列数
+	 * @param value	插入二维数组参数
+	 */
 	public Matrix (int m, int n, int[][] value) {
 		this(m, n);
 		for(int i = 0; i < value.length && i < m; i++)

@@ -20,7 +20,7 @@ public class HeapSort {
 	public int[] headSort(int[] a, int len){
 		//第一个for：
 		//需要：从最尾端开始将最大的元素推到树顶
-		//len/2-1得到一个最尾端的非叶子节点
+		//len/2-1得到一个最尾端的非叶子结点
 		//通过for循环一次将最大的元素推到树顶
 		for(int i = len/2-1; i >= 0; i--)
 			adjustHead(a, i, len);	//构建大顶堆
@@ -44,9 +44,9 @@ public class HeapSort {
 	 * void
 	 */
 	public void adjustHead(int[] arr, int i, int len){
-		int temp = arr[i];//当前非叶子节点
+		int temp = arr[i];//当前非叶子结点
 		for(int k = i*2+1; k < len; k = k*2+1){
-			if(k+1<len && arr[k] < arr[k+1]) k++;
+			if(k+1 < len && arr[k] < arr[k+1]) k++;
 			if(arr[k] > temp) {
 				arr[i] = arr[k];
 				i = k;

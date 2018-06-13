@@ -5,13 +5,16 @@ package com.chen.sort;
  * 描述:<br>
  * 稳定算法
  * 时间复杂度： O(2n) 
+ * 
+ * 实现：
+ * 
  * @author 威 
  * <br>2018
  */
 public class SelectionSort {
 	/**
 	 * <p>
-	 * 在未排序的数列中找到最小元素，将其放到数列其实位置；接着从剩余未排序的数列中继续前面的步骤	 
+	 * 在未排序的数列中找到最小元素，将其放到有序数列末尾位置；接着从剩余未排序的数列中继续前面的步骤	 
 	 * @param a
 	 * @param len
 	 * @return

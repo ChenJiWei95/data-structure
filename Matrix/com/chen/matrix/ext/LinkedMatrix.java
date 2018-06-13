@@ -1,4 +1,7 @@
 package com.chen.matrix.ext;
+
+import com.chen.matrix.Triple;
+
 /**
  * <b>链式矩阵存储</b>
  * 描述:<br>
