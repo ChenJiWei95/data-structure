@@ -44,7 +44,7 @@
 * com.chen.search.binarysearch
 二分法查找 <br>
 条件: <br>
-1.顺序查找 <br>
+1.顺序存储 <br>
 2.查找列为有序 <br>
 
 * com.chen.search.blocksearch
