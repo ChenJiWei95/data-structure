@@ -61,6 +61,7 @@ public class BinaryTreeExt<T> implements BinaryTree<T>{
 	public void levelorder(BinaryNode<T> p){
 		
 	}
+	//头插入，并将原根节点作为当前插入的节点的左根
 	public BinaryNode<T> insert(T x){
 		return this.root = new BinaryNode<T>(x, this.root, null);
 	}
