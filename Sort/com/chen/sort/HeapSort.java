@@ -46,8 +46,8 @@ public class HeapSort {
 	public void adjustHead(int[] arr, int i, int len){
 		int temp = arr[i];//当前非叶子结点
 		for(int k = i*2+1; k < len; k = k*2+1){
-			if(k+1 < len && arr[k] < arr[k+1]) k++;
-			if(arr[k] > temp) {
+			if(k+1 < len && arr[k] < arr[k+1]) k++; //与相邻的兄弟节点比较，选最大
+			if(arr[k] > temp) {			//与当前堆顶节点比较，置换最大的元素到当前堆顶，然后在从置换的位置开始继续循环
 				arr[i] = arr[k];
 				i = k;
 			}else {
