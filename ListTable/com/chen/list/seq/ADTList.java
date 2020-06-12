@@ -1,4 +1,4 @@
-package com.chen.list;
+package com.chen.list.seq;
 /**
  * <b>线性表接口</b>
  * @author 威
@@ -29,6 +29,7 @@ public interface ADTList<E> {
 	/**
 	 * 设置第index个元素为E
 	 * @param index
+	 * 		从0开始
 	 * @param e
 	 * void
 	 * @since 1.0
@@ -45,8 +46,9 @@ public interface ADTList<E> {
 	/**
 	 * 插入e元素作为第index个元素 
 	 * @param index
+	 * 			从0开始
 	 * @param e
-	 * @return
+	 * @return 返回插入位置
 	 * Node<E>
 	 * @see
 	 * @since 1.0
@@ -55,8 +57,9 @@ public interface ADTList<E> {
 	
 	/**
 	 * 插入e元素作为第index个元素
+	 * 			从0开始
 	 * @param e
-	 * @return
+	 * @return 返回插入位置
 	 * Node<E>
 	 * @since 1.0
 	 */
@@ -65,6 +68,7 @@ public interface ADTList<E> {
 	/**
 	 * 删除第index为元素并返回被删除元素
 	 * @param index
+	 * 			从0开始
 	 * @return
 	 * E
 	 * @since 1.0
@@ -108,7 +112,7 @@ public interface ADTList<E> {
 	/**
 	 *  插入不重复的元素
 	 * @param e
-	 * @return
+	 * @return 返回插入位置
 	 * Node<E>
 	 * @since 1.0
 	 */

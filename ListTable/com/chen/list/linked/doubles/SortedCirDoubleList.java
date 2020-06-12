@@ -1,4 +1,4 @@
-package com.chen.linked.cirext;
+package com.chen.list.linked.doubles;
 import com.chen.list.linked.DoubleNode;
 /**
  * <b>排序循环升序</b>

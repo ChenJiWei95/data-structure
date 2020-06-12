@@ -1,7 +1,7 @@
-package com.chen.linked.ext;
+package com.chen.list.linked.sing;
 
-import com.chen.list.ADTList;
 import com.chen.list.linked.Node;
+import com.chen.list.seq.ADTList;
 
 /**
  * <b>线性链表</b>
@@ -40,16 +40,16 @@ public class SinglyList<E> implements ADTList<E> {
 	
 	public E get(int index) {
 		Node<E> p = this.head.next;
-		for(int j = 0; p != null&&j < index; j++)
+		for(int j = 0; p != null && j < index; j++)
 			p = p.next;
-		return (index>=0&&p!=null) ? p.data : null;
+		return (index>=0 && p!=null) ? p.data : null;
 	}
 	
 	public void set(int index, E e) {
 		Node<E> p = this.head.next;
 		if(index+1 > size() && index < 0)
 			throw new RuntimeException("下标异常 -- 超出表范围");
-		for(int j = 0; p != null&&j < index; j++)
+		for(int j = 0; p != null && j < index; j++)
 			p = p.next;
 		/*以上的循环获取第index节点*/
 		p.data = e;
@@ -58,20 +58,22 @@ public class SinglyList<E> implements ADTList<E> {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		
-		for(Node<E> p = this.head.next; p!=null; p = p.next){
+		for(Node<E> p = this.head.next; p != null; p = p.next){
 			sb.append(p.data);
 			if(p.next!=null)
 				sb.append(",");
 		}
 		return sb.toString();
 	}
+	
+	// 复杂度是O（n）
 	public int insert(int index, E e) {
 		if(e == null)
 			throw new NullPointerException("x==null");
 		/*if(index+1 > size() && index < 0)
 			throw new RuntimeException("下标异常 -- 超出表范围");*/
 		Node<E> p = this.head;
-		for(int j = 0; p.next != null&&j < index; j++)
+		for(int j = 0; p.next != null && j < index; j++)
 			p = p.next;
 		/*以上的循环获取第index-1节点*/
 		p.next = new Node<E>(e, p.next); /*将index-1节点指向新节点并将新节点指向index+1节点*/
@@ -85,9 +87,9 @@ public class SinglyList<E> implements ADTList<E> {
 	
 	public E remove(int index) {
 		Node<E> p = this.head;
-		for(int j = 0; p.next != null&&j < index; j++) /*返回index-1节点*/
+		for(int j = 0; p.next != null && j < index; j++) /*返回index-1节点*/
 			p = p.next;
-		if(index >= 0&&p.next != null){
+		if(index >= 0 && p.next != null){
 			E old = p.next.data;
 			p.next = p.next.next;
 			return old;
@@ -141,4 +143,16 @@ public class SinglyList<E> implements ADTList<E> {
 			insert(e);
 		}
 	} 
+	
+	public static void main(String[] args){
+		Integer i = new Integer(0);
+		Integer b = new Integer(0);
+		System.out.println(i.equals(b));
+		System.out.println(i==b);
+		
+		int j = 0;
+		int d = 0;
+//		System.out.println(j.equals(d));
+		System.out.println(j==d);
+	}
 }

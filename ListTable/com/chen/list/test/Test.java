@@ -1,5 +1,5 @@
 package com.chen.list.test;
-import com.chen.linked.ext.SinglyList;
+import com.chen.list.linked.sing.SinglyList;
 /**
  * 
  * <b>对SinglyList的测试<b>

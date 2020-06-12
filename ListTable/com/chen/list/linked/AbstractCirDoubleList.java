@@ -2,7 +2,7 @@ package com.chen.list.linked;
 
 import java.util.List;
 
-import com.chen.list.ADTList;
+import com.chen.list.seq.ADTList;
 
 public abstract class AbstractCirDoubleList<T> implements ADTList<T> {
 

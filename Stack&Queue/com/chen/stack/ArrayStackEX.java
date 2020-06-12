@@ -10,9 +10,9 @@ package com.chen.stack;
  * 
  */
 public class ArrayStackEX<E> implements Stack<E>{
-	private Object[] data = null ;
-	private int maxSize = 0 ; /*栈容量*/
-	private int top = -1 ; /*栈顶指针  会随着元素的插入二递增并且作为栈元素的下标*/
+	private Object[] data = null;
+	private int maxSize = 0; /*栈容量*/
+	private int top = -1; /*栈顶指针  会随着元素的插入二递增并且作为栈元素的下标*/
 	
 	/**
 	 * 
@@ -20,15 +20,15 @@ public class ArrayStackEX<E> implements Stack<E>{
 	 *
 	 */
 	public ArrayStackEX(){
-		this(10) ;
+		this(10);
 	}
 	public ArrayStackEX(int initialSize){
 		if(initialSize >= 0){
-			this.maxSize = initialSize ; 
-			data = new Object[initialSize] ;
-			top = -1 ;
+			this.maxSize = initialSize; 
+			data = new Object[initialSize];
+			top = -1;
 		}else{
-			throw new RuntimeException("初始化不能小于0:" +initialSize) ;
+			throw new RuntimeException("初始化不能小于0:" +initialSize);
 		}
 	}
 	
@@ -41,7 +41,7 @@ public class ArrayStackEX<E> implements Stack<E>{
 	 *
 	 */
 	public boolean isEmpty() {
-		return this.top == -1 ? true : false ; 
+		return this.top == -1 ? true : false; 
 	}
 	public int size(){
 		return this.top+1;
@@ -58,11 +58,11 @@ public class ArrayStackEX<E> implements Stack<E>{
 	 */
 	public boolean push(E e){
 		if(this.top == maxSize - 1){
-			throw new RuntimeException("栈已满，无法将元素入栈") ;
+			throw new RuntimeException("栈已满，无法将元素入栈");
 		}
 		else{
-			data[++this.top] = e ;
-			return true ;
+			data[++this.top] = e;
+			return true;
 		}
 	}
 	
@@ -77,10 +77,10 @@ public class ArrayStackEX<E> implements Stack<E>{
 	@SuppressWarnings("unchecked")
 	public E peek() {
 		if(this.top == -1){
-			throw new RuntimeException("栈为空") ;
+			throw new RuntimeException("栈为空");
 		}
 		else{
-			return (E) data[this.top] ;
+			return (E) data[this.top];
 		}
 	}
 	
@@ -95,10 +95,10 @@ public class ArrayStackEX<E> implements Stack<E>{
 	@SuppressWarnings("unchecked")
 	public E pop(){
 		if(this.top == -1){
-			throw new RuntimeException("栈为空") ;
+			throw new RuntimeException("栈为空");
 				
 		}else{
-			return (E) data[this.top --] ; // 通过top自减来去除顶部元素 
+			return (E) data[this.top--]; // 通过top自减来去除顶部元素 
 			
 		}
 			
@@ -114,17 +114,17 @@ public class ArrayStackEX<E> implements Stack<E>{
 	 *
 	 */
 	public int search(E e){
-		int temp = this.top ;
+		int temp = this.top;
 		while(this.top != -1){
 			if(peek() != e){
-				this.top -- ;
+				this.top --;
 			}else{
-				break ;
+				break;
 			}
 		}
-		int result = this.top+1 ;
-		this.top = temp ;
-		return result ;
+		int result = this.top+1;
+		this.top = temp;
+		return result;
 	}
 	@Override
 	public String toString(){

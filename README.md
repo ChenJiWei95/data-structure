@@ -1,7 +1,10 @@
 数据结构
 ====
 
-### Stack&Queue
+### ListTable
+* 顺序存储
+* 链式存储
+
 #### Stack
 顺序表实现栈
 链式表实现栈
@@ -9,10 +12,6 @@
 #### Queue
 顺序表实现队列
 链式表实现队列
-
-### ListTable
-* 顺序存储
-* 链式存储
 
 ### Matrix(矩阵)
 * Matrix
@@ -26,7 +25,7 @@
 * com.chen.genlist.ext.GenListExt
 `广义表实现类`
 
-### Sort(排序算法) <br>
+### Sort(排序算法)  
 * 冒泡排序 
 * 快速排序 
 * 直接插入排序
@@ -42,10 +41,10 @@
 
 ### search(查找)
 * com.chen.search.binarysearch
-二分法查找 <br>
-条件: <br>
-1.顺序存储 <br>
-2.查找列为有序 <br>
+二分法查找   
+条件:   
+1.顺序存储    
+2.查找列为有序   
 
 * com.chen.search.blocksearch
 索引块查找

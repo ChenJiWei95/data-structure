@@ -2,8 +2,6 @@ package com.chen.list.seq;
 
 import java.util.List;
 
-import com.chen.list.ADTList;
-
 /**
  * <b>顺序存储的线性表</b>
  * @author 威
@@ -41,7 +39,6 @@ public class SepList<T> implements ADTList<T> {
 	}
 
 	@SuppressWarnings("unchecked")
-	
 	public T get(int index) {
 		return (T) this.elements[index];
 	}
@@ -50,13 +47,9 @@ public class SepList<T> implements ADTList<T> {
 	public T remove(int index) {
 		if(index > n || index < 0)
 			throw new IndexOutOfBoundsException(index + "");
-		T temp = null;
-		for(int i = 0; i < n; i++){
-			if(i == index)
-				temp = (T) elements[i];
-			else if(i > index)
-				elements[i-1] = elements[i];
-		}
+		T temp = (T) elements[index];
+		for(int i = index+1; i < n; i++)
+			elements[i-1] = elements[i];
 		n--;
 		return temp;
 	}
@@ -125,19 +118,17 @@ public class SepList<T> implements ADTList<T> {
 			throw new NullPointerException("e == null");
 		if(index > n || index < 0)
 			throw new IndexOutOfBoundsException(index + "");
-		T now = null;
-		T pre;
 		n++;
-		for(int i = 0; i < n; i++){
-			if(i == index){
-				now = (T) elements[i];
-				elements[i] = e;
-			}
-			else if(i > index){
-				pre = now;
-				now = (T) elements[i];
-				elements[i] = pre;
-			}
+		if(n > elements.length)
+			throw new IndexOutOfBoundsException("超出限定长度："+ elements.length + "；操作后长度:" + n);
+		// 替换index位置的元素为e
+		T pre = (T) elements[index];
+		elements[index] = e;
+		// index位置后面的元素向后移
+		for(int i = index+1; i < n; i++){
+			T temp = (T) elements[i];
+			elements[i] = pre;
+			pre = temp;
 		}
 		return index;
 	}
@@ -166,7 +157,7 @@ public class SepList<T> implements ADTList<T> {
 	public int insertDifferent(T e) {
 		if(e == null)
 			throw new NullPointerException("e == null");
-		if(contains(e))
+		if(!contains(e))
 			return this.insert(e);
 		return -1;
 	}
@@ -177,13 +168,16 @@ public class SepList<T> implements ADTList<T> {
 			this.insert(t);
 	}
 	
-	/*public static void main(String[] args){
-		SepList<Integer> sep = new SepList<Integer>();
-		sep.insert(23);
-		sep.insert(24);
-		sep.insert(25);
-		sep.insert(26);
-		System.out.println(sep.search(0));
+	public static void main(String[] args){
+		SepList<Integer> sep = new SepList<Integer>(3);
+		sep.insert(1);
+		sep.insert(3);
+		/*sep.insert(25);
+		sep.insert(26);*/
+//		System.out.println(sep.search(0));
+		sep.insert(2, 2);
+		sep.remove(2);
+//		sep.set(0, 2);
 		System.out.println(sep.toString());
-	}*/
+	}
 }

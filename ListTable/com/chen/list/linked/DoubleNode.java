@@ -26,8 +26,6 @@ public class DoubleNode<T> {
 	}
 	
 	public String toString(){
-		StringBuilder sb = new StringBuilder("DoubleNode=[");
-		sb.append(data).append(",").append(prev).append(",").append(next);
-		return sb.append("]").toString();
+		return data.toString();
 	}
 }

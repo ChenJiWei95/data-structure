@@ -12,40 +12,40 @@ package com.chen.stack;
  * 
  */
 public class NodeStackEX<E> implements Stack<E>{
-	private int size = 0 ;
-	private Node<E> top ;
+	private int size = 0;
+	private Node<E> top;
 	
 	public int length(){
-		return size ;
+		return size;
 	}
 	
 	public E pop(){
 		if(isEmpty())
-			throw new RuntimeException("栈为空！") ;
+			throw new RuntimeException("栈为空！");
 		else{
-			Node<E> value = top ; 	/*将当前的节点赋值于value*/
-			top = top.next ; 		/*将当前的节点指向下一个节点量*/
-			value.next = null ; 	/*将当前的节点回收*/ 
-			size-- ;
-			return value.e ;	
+			Node<E> value = top; 	/*将当前的节点赋值于value*/
+			top = top.next; 		/*将当前的节点指向下一个节点量*/
+			value.next = null; 	/*将当前的节点回收*/ 
+			size--;
+			return value.e;	
 		}
 	}
 	
 	public boolean isEmpty(){
-		return size == 0 ;
+		return size == 0;
 	}
 
 	public boolean push(E e) {
-		top = new Node<E>(e, top) ;
-		size++ ;
-		return true ;
+		top = new Node<E>(e, top);
+		size++;
+		return true;
 	}
 
 	public E peek() {
 		if(isEmpty())
-			throw new RuntimeException("栈为空！") ;
+			throw new RuntimeException("栈为空！");
 		else 
-			return top.e ;
+			return top.e;
 	}
 	
 	/**
@@ -59,8 +59,8 @@ public class NodeStackEX<E> implements Stack<E>{
 	 */
 	@SuppressWarnings("hiding")
 	class Node<E> {
-		private E e ;
-		private Node<E> next ;
+		private E e;
+		private Node<E> next;
 		/**
 		 * 
 		 * Node构造方法 每次创建节点时传入上一个创建的节点
@@ -69,8 +69,8 @@ public class NodeStackEX<E> implements Stack<E>{
 		 *
 		 */
 		public Node(E e, Node<E> next){
-			this.e = e ;
-			this.next = next ;
+			this.e = e;
+			this.next = next;
 		}
 	}
 

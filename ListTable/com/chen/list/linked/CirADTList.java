@@ -20,6 +20,7 @@ public interface CirADTList<E> {
 	/**
 	 * 返回第index个元素
 	 * @param index
+	 * 			从1开始
 	 * @return
 	 * E
 	 * @since 1.0

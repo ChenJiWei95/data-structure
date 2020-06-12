@@ -11,26 +11,26 @@ import java.util.LinkedList;
  * 
  */
 public class LinkedStackEX<E> implements Stack<E>{
-	private LinkedList<E> ll ; 
+	private LinkedList<E> ll; 
 	
 	public LinkedStackEX(){
-		ll = new LinkedList<E>() ;
+		ll = new LinkedList<E>();
 	}
 	
 	public boolean isEmpty() {
-		return ll.isEmpty() ;
+		return ll.isEmpty();
 	}
 
 	public boolean push(E e) {
-		return ll.add(e) ;
+		return ll.add(e);
 	}
 
 	public E peek() {
-		return ll.getFirst() ;
+		return ll.getFirst();
 	}
 
 	public E pop() {
-		return ll.removeFirst() ;
+		return ll.removeFirst();
 	}
 
 }

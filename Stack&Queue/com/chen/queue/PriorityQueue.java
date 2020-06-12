@@ -1,6 +1,6 @@
 package com.chen.queue;
 
-import com.chen.linked.cirext.SortedCirDoubleList;
+import com.chen.list.linked.doubles.SortedCirDoubleList;
 /**
  * <b>优先队列</b>
  * <p>
