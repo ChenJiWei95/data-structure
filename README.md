@@ -14,13 +14,12 @@
 顺序表实现队列  
 链式表实现队列  
 
-<<<<<<< HEAD
 ### Matrix(矩阵)  
 * Matrix  
 `简单存储`  
 * LinkedMatrix  
 `链式存储`  
-=======
+ 
 ### Matrix(矩阵)
 * Matrix
 `简单存储`
