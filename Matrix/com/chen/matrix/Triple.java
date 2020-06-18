@@ -14,8 +14,9 @@ package com.chen.matrix;
  * @since 1.0
  */
 public class Triple implements Comparable<Triple>, Addible<Triple>{
-	int row, column, value;
+	public int row, column, value;
 	public Triple (int row, int column, int value) {
+//		System.out.println("("+row+", "+column+", "+value+")");
 		if(row >= 0 && column >= 0){
 			this.row = row;
 			this.column = column;
@@ -37,9 +38,12 @@ public class Triple implements Comparable<Triple>, Addible<Triple>{
 		return (this.row < tri.row || this.row == tri.row 
 			&& this.column < tri.column) ? -1 : 1;
 	}
-	//比较三元组是否相等，比较位置和元素值
-	public boolean equals(Triple tri) {
-		if(tri.row != this.row || tri.column != this.column || tri.value != this.value)
+	//比较三元组是否相等，比较位置和元素值 。 有一个要素不相等，就会返回false
+	// 如果要使用get方法那么此处必须得是比较位置是否相等
+	@Override
+	public boolean equals(Object tri) {
+//		System.out.println("equals: "+tri);
+		if(((Triple)tri).row != this.row || ((Triple)tri).column != this.column)
 			return false;
 		return true;
 	}

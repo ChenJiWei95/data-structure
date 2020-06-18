@@ -102,8 +102,10 @@ public class SinglyList<E> implements ADTList<E> {
 	}
 	
 	public int search(E key) {
+//		System.out.println("search: toString: "+toString());
 		Node<E> p = this.head.next;
 		for(int i = 0; p != null; i++){
+//			System.out.println("search: for: "+p.data.getClass());
 			if(p.data.equals(key))
 				return i;
 			p = p.next;

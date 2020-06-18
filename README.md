@@ -2,8 +2,9 @@
 ====
 
 ### ListTable  
-* 前往[顺序存储](/blob/master/ListTable/README.md "点击跳转")  
-* 链式存储  
+* 顺序存储  
+* 链式存储    
+[README.MD](ListTable/README.md "点击跳转")  
 
 #### Stack  
 顺序表实现栈  
@@ -13,11 +14,19 @@
 顺序表实现队列  
 链式表实现队列  
 
+<<<<<<< HEAD
 ### Matrix(矩阵)  
 * Matrix  
 `简单存储`  
 * LinkedMatrix  
-`链式存储稀疏矩阵`  
+`链式存储`  
+=======
+### Matrix(矩阵)
+* Matrix
+`简单存储`
+* LinkedMatrix
+`链式存储稀疏矩阵`
+>>>>>>> branch 'master' of https://github.com/13430394603/data-structure.git
 
 * 特殊矩阵：   
 	对称矩阵  
@@ -41,20 +50,20 @@
 * com.chen.genlist.ext.GenListExt  
 `广义表实现类`  
 
-### Sort(排序算法)  
-* 冒泡排序 
-* 快速排序 
-* 直接插入排序
-* 希尔排序
-* 选择排序 
-* 归并排序
-* 基数排序
-* 堆排序 
-前往[排序](Sort/README.md "点击前往md文件")
+### Sort(排序算法)   
+* 冒泡排序   
+* 快速排序   
+* 直接插入排序  
+* 希尔排序  
+* 选择排序  
+* 归并排序  
+* 基数排序  
+* 堆排序   
+[README.MD](Sort/README.md "点击前往md文件")  
 
 ### tree(树)
 * com.chen.tree.BinaryTree（二叉树）
-* com.chen.tree.rbtree（红黑树）
+* com.chen.tree.rbtree（[红黑树](tree/README.md "点击前往")）
 
 ### search(查找)
 * com.chen.search.binarysearch
