@@ -25,8 +25,7 @@
 * Matrix
 `简单存储`
 * LinkedMatrix
-`链式存储稀疏矩阵`
->>>>>>> branch 'master' of https://github.com/13430394603/data-structure.git
+`链式存储稀疏矩阵` 
 
 * 特殊矩阵：   
 	对称矩阵  
