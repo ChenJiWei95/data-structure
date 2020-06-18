@@ -17,7 +17,7 @@
 * Matrix
 `简单存储`
 * LinkedMatrix
-`链式存储`
+`链式存储稀疏矩阵`
 
 ### GenList(广义表)
 * com.chen.genlist.ext.GenList_String
