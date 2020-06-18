@@ -9,10 +9,12 @@
 #### Stack  
 顺序表实现栈  
 链式表实现栈  
+[前往](Stack&Queue "点击跳转")  
 
 #### Queue  
 顺序表实现队列  
 链式表实现队列  
+[前往](Stack&Queue "点击跳转")  
 
 ### Matrix(矩阵)  
 * Matrix  

@@ -1,6 +1,11 @@
 ## 队列  
 
-* Queue  接口  
+* Queue  接口    
+
+public boolean isEmpty() ;  
+public boolean add(E e) ;  
+public E peek() ;  
+public E poll() ;  
 
 * SeqQueue  顺序队列  
 		
