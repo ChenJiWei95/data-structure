@@ -12,7 +12,7 @@
 |RadixSort|基数排序|算法稳定|平均/最差/最好 O(d(n+r))
 |HeapSort|堆排序||平均/最差/最好 O(nlogn)
 
-![sort](sort.jpg sort)  
+![sort](sort.jpg 'sort')  
 
 ## Sort  
 
